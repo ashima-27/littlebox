@@ -1,0 +1,11 @@
+.set {
+  width: 100% !important;
+}
+.whitebg {
+  background-color: white;
+}
+.bgg {
+  background-color: #0000005e;
+  text-align: center;
+  height: 50%;
+}

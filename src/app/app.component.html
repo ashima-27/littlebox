@@ -1,0 +1,32 @@
+<!-- <app-welguest></app-welguest>
+<app-weluser></app-weluser>
+<app-header></app-header>
+ <app-signin></app-signin>
+<app-signup></app-signup>
+<app-changepassword></app-changepassword>
+<app-adminsignup></app-adminsignup>
+<app-normalheader></app-normalheader>
+<app-adminheader></app-adminheader>
+<app-searchuser></app-searchuser>
+<app-footer></app-footer> 
+<router-outlet></router-outlet>-->
+<app-welguest></app-welguest> 
+<div *ngIf="flag;then adminblock else userblock"></div>
+<ng-template #adminblock>
+   
+
+    <app-adminheader></app-adminheader>
+</ng-template>
+
+<ng-template #userblock>
+   
+   <app-normalheader></app-normalheader>
+
+</ng-template>
+
+<div id="outlet"> 
+    <router-outlet></router-outlet>
+</div> 
+
+<app-footer></app-footer>
+<ng-http-loader></ng-http-loader>

@@ -1,0 +1,213 @@
+/* You can add global styles to this file, and also import other style files */
+/* .chnges{
+    padding:175px;
+} */
+
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+#outlet {
+  background-color: black;
+  /* padding: 101px; */
+  margin-top: -2% !important;
+}
+.white {
+  color: white !important;
+}
+.desc {
+  width: 351px !important;
+}
+.whitebg {
+  background-color: white !important;
+}
+
+.green {
+  color: #2fdab8 !important ;
+}
+.greenbg {
+  background-color: #2fdab8 !important ;
+}
+.navbar-nav {
+  flex-direction: row !important;
+}
+.navbar-nav .dropdown-menu {
+  position: absolute !important;
+}
+.des {
+  width: 900px;
+  /* float:center; */
+  margin-left: -205px;
+}
+.dest {
+  /* width: 900px; */
+  margin-left: -64px;
+  width: 611px;
+}
+.dd {
+  margin-bottom: 0rem !important;
+}
+.hh {
+  margin-bottom: 0px !important;
+}
+.size {
+  height: 475px !important;
+}
+.members {
+  width: 613px;
+  margin-left: -99px;
+}
+.destin {
+  margin-left: -176px;
+  width: 871px;
+}
+.height {
+  height: 273px;
+}
+.catwidth {
+  width: 400px;
+}
+.catsub {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+}
+.wid {
+  width: 592px !important;
+}
+.AA {
+  width: 755px !important;
+}
+.bb {
+  width: 852px;
+}
+.blackbg {
+  background-color: black !important;
+}
+.black {
+  color: black !important;
+}
+.ss {
+  width: 400px;
+}
+a {
+  text-decoration: none !important;
+}
+.imgsize {
+  height: 356px !important;
+}
+.nn {
+  flex-wrap: initial !important;
+}
+.img-size1 {
+  height: 242px !important;
+}
+.subdes {
+  position: absolute;
+  top: 90% !important;
+  left: 0% !important;
+  font-size: 2em;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 0px !important;
+  text-align: center !important;
+  background-color: #2fdab8 !important;
+  width: 100% !important;
+  /* position: fixed; */
+  color: black !important;
+}
+.size2 {
+  height: 1033px;
+}
+.modal-dialog {
+  padding: 4% !important;
+}
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+.example-ripple-container {
+  cursor: pointer !important;
+
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+
+  -webkit-user-drag: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+.addc {
+  margin-left: -147px !important;
+}
+.addp {
+  width: 611px !important;
+}
+.lo {
+  margin-left: -269px !important;
+}
+.head {
+  margin-left: -45px !important;
+}
+.gg {
+  max-width: 101.666667% !important;
+}
+.para {
+  margin-top: 12px !important;
+  color: white !important;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  .dest {
+    width: 400px !important;
+    margin-left: 2% !important;
+  }
+  .des {
+    width: 400px !important;
+    margin-left: 2% !important;
+  }
+  .destin {
+    width: 400px !important;
+    margin-left: 2% !important;
+  }
+  .imgt {
+    height: 623px !important;
+  }
+
+  .imgtt {
+    height: 386px !important;
+  }
+  .oh {
+    margin-left: 0% !important;
+    width: 431px !important;
+  }
+  .tab {
+    margin-left: -30px !important;
+  }
+  .ico {
+    margin-left: -156px !important;
+  }
+  .shc {
+    max-width: 84% !important;
+  }
+  .rr {
+    display: grid !important;
+  }
+  .shs {
+    margin-top: 11.5px !important;
+  }
+  .con {
+    margin-top: 11px !important;
+  }
+  .cartbox {
+    width: 473px !important;
+    margin-left: -18px !important;
+  }
+  .ss {
+    margin-left: -57px !important;
+  }
+  .butto {
+    margin-left: 1rem !important;
+  }
+  .am {
+    width: 465px !important;
+  }
+  .navcollapse {
+    display: contents !important;
+  }
+}

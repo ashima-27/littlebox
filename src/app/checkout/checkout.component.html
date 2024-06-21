@@ -1,0 +1,110 @@
+<!-- Modal1 -->
+<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog">-->
+<div class="modal-dialog">
+  <!-- Modal content-->
+  <div class="modal-content">
+    <!-- <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div> -->
+    <div class="modal-body modal-body-sub_agile">
+      <div class="col-md-8 modal_body_left modal_body_left1 chnges">
+        <h3 class="agileinfo_sign">CHECKOUT</h3>
+        <form enctype="multipart/form-data" action="#" method="post">
+          <div class="form-group">
+            <select
+              name="pmode"
+              class="form-control"
+              (change)="showcarddetails()"
+              [(ngModel)]="pmode"
+            >
+              <option value="">Choose Payment Mode</option>
+              <option value="cash">Cash on Delivery</option>
+              <option value="card">Credit Card / Debit Card</option>
+            </select>
+          </div>
+          <div *ngIf="flag">
+            <select name="coname" class="form-control" [(ngModel)]="coname">
+              <option value="">Choose Company Name</option>
+              <option>Visa</option>
+              <option>Master Card</option>
+              <option>RuPay</option></select
+            ><br />
+
+            <div class="styled-input p-3">
+              <input type="text" name="hname" [(ngModel)]="hname" required="" />
+              <label>Holder Name</label>
+              <span></span>
+            </div>
+            <div class="styled-input p-3">
+              <input
+                type="text"
+                name="cardno"
+                [(ngModel)]="cardno"
+                required=""
+              />
+              <label>Card Number</label>
+              <span></span>
+            </div>
+            <div class="styled-input p-3">
+              <input
+                type="text"
+                name="expmonth"
+                [(ngModel)]="expmonth"
+                required=""
+              />
+              <label>Expiry Month</label>
+              <span></span>
+            </div>
+            <div class="styled-input p-3">
+              <input
+                type="text"
+                name="expyear"
+                [(ngModel)]="expyear"
+                required=""
+              />
+              <label>Expiry Year</label>
+              <span></span>
+            </div>
+            <div class="styled-input p-3">
+              <input type="password" name="cvv" [(ngModel)]="cvv" required="" />
+              <label>CVV</label>
+              <span></span>
+            </div>
+          </div>
+
+          <!-- <div *ngIf="flag" class="form-group"> -->
+          <!-- <img src="uploads/{{cpic}}" height="75"> -->
+
+          <fieldset>
+            <input
+              type="submit"
+              name="b1"
+              (click)="oncheckout()"
+              value="MAKE PAYMENT"
+              class="button"
+            />
+          </fieldset>
+          <!-- </div> -->
+
+          {{ msg }}
+        </form>
+        <!-- <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
+                                                    <li><a href="#" class="facebook">
+                                                          <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                                                          <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
+                                                    <li><a href="#" class="twitter"> 
+                                                          <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                                                          <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
+                                                    <li><a href="#" class="instagram">
+                                                          <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                                                          <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
+                                                    <li><a href="#" class="pinterest">
+                                                          <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                                                          <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
+                                                </ul> -->
+
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,234 @@
+<!-- Modal1 -->
+<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog">-->
+<div class="modal-dialog">
+  <!-- Modal content-->
+  <div class="modal-content dest addc">
+    <!-- <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div> -->
+    <div class="modal-body modal-body-sub_agile">
+      <div class="col-md-8 modal_body_left modal_body_left1 chnges">
+        <h3 class="agileinfo_sign">ADD <span>SUB CATEGORIES</span></h3>
+        <form
+          enctype="multipart/form-data"
+          action="#"
+          method="post"
+          #subcatform="ngForm"
+        >
+          <div class="styled-input form-group">
+            <select
+              class="custom-select form-group styled-input"
+              name="category"
+              [(ngModel)]="category"
+              (change)="showsubcat()"
+            >
+              <option value="">Choose Category</option>
+              <option *ngFor="let x of allcatlist" value="{{ x._id }}">
+                {{ x.categoryname }}
+              </option>
+            </select>
+            <label>Category Name</label>
+          </div>
+          <div class="styled-input p-3">
+            <input
+              type="text"
+              name="scatname"
+              [(ngModel)]="scatname"
+              required=""
+              #sub="ngModel"
+            />
+            <div
+              *ngIf="sub.invalid && (sub.dirty || sub.touched)"
+              class="alert alert-danger"
+            >
+              <div *ngIf="sub.errors.required">Subcategory is required.</div>
+            </div>
+            <label>Sub Category Name</label>
+            <span></span>
+          </div>
+          <div class="form-group">
+            <input type="file" name="catpic" (change)="fileselected($event)" />
+            <!-- <label>Category Image</label> -->
+            <span></span>
+          </div>
+          <div class="form-group">
+            <input
+              type="submit"
+              value="UPLOAD SUB CATEGORY"
+              name="b1"
+              (click)="addsubcat()"
+              [disabled]="!subcatform.valid"
+            />
+            <span></span>
+          </div>
+        </form>
+        <!-- <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
+                                                    <li><a href="#" class="facebook">
+                                                          <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                                                          <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
+                                                    <li><a href="#" class="twitter"> 
+                                                          <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                                                          <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
+                                                    <li><a href="#" class="instagram">
+                                                          <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                                                          <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
+                                                    <li><a href="#" class="pinterest">
+                                                          <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                                                          <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
+                                                </ul> -->
+
+        <div class="clearfix"></div>
+
+        <p>{{ msg }}</p>
+      </div>
+      <div class="col-md-4 modal_body_right modal_body_right1">
+        <img src="images/m6.jpg" class="size" alt=" " />
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!-- //Modal content-->
+</div>
+<!-- </div> -->
+<!-- //Modal1 -->
+<!-- <div class="modal-dialog mw">  -->
+<!-- Modal content-->
+<!-- <div class="modal-content"> -->
+<!-- <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div> -->
+<!-- <div class="modal-body modal-body-sub_agile ">
+            <div class="modal_body_left modal_body_left1 ">
+            <h3 class="agileinfo_sign">Already Added Sub Categories</h3>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">SNo.</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                    
+                    <tr *ngFor="let x of subcatlist;index as i">
+                    <td>{{i+1}}</td>
+                    <td><img src="uploads/{{x.subcatpic}}" height="75"></td>
+                    <td>{{x.subcatname}}</td>
+                
+                    <td><button type="button" class="btn btn-light" >Update</button></td>
+                    <td><button type="button" class="btn btn-light" (click)="oncatdel(x._id)">Delete</button>
+                    </td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            <p>{{msg}}</p>
+             
+                                            <div class="clearfix"></div>
+                                           
+                                            
+
+            </div> -->
+<!-- <div class="col-md-4 modal_body_right modal_body_right1">
+                <img src="images/log_pic.jpg" alt=" "/>
+            </div> -->
+<!-- <div class="clearfix"></div>
+        </div>
+    </div> -->
+<!-- //Modal content-->
+<!-- </div> -->
+<!-- </div> -->
+<!-- //Modal1 -->
+
+<div class="new_arrivals_agile_w3ls_info">
+  <div class="container">
+    <h3 class="wthree_text_info white">
+      ALREADY ADDED <span> SUB-CATEGORIES</span>
+    </h3>
+    <!--/tab_one-->
+    <div class="tab1" *ngFor="let x of subcatlist; index as i">
+      <div class="col-md-3 product-men">
+        <div class="men-pro-item simpleCart_shelfItem">
+          <div class="men-thumb-item">
+            <img
+              src="uploads/{{ x.subcatpic }}"
+              alt=""
+              class="pro-image-front img-size1"
+            />
+            <img
+              src="uploads/{{ x.subcatpic }}"
+              alt=""
+              class="pro-image-back img-size1"
+            />
+            <div class="men-cart-pro">
+              <div class="inner-men-cart-pro">
+                <a href="single.html" class="link-product-add-cart"
+                  >Quick View</a
+                >
+              </div>
+            </div>
+            <!-- <span class="product-new-top">New</span> -->
+          </div>
+          <div class="item-info-product">
+            <h4>
+              <a href="single.html">{{ x.subcatname }}</a>
+            </h4>
+            <!-- <div class="info-product-price">
+											<span class="item_price">$45.99</span>
+											<del>$69.71</del>
+										</div> -->
+            <div
+              class="
+                snipcart-details
+                top_brand_home_details
+                item_add
+                single-item
+                hvr-outline-out
+                button2
+              "
+            >
+              <form action="#" method="post">
+                <fieldset>
+                  <input
+                    type="submit"
+                    [routerLink]="['/updatesubcat']"
+                    [queryParams]="{ subcatid: x._id }"
+                    name="submit"
+                    class="button greenbg"
+                    value="UPDATE"
+                  />
+                </fieldset>
+              </form>
+            </div>
+
+            <div
+              class="
+                snipcart-details
+                top_brand_home_details
+                item_add
+                single-item
+                hvr-outline-out
+                button2
+              "
+            >
+              <form action="#" method="post">
+                <fieldset>
+                  <input
+                    type="submit"
+                    name="submit"
+                    (click)="oncatdel(x._id)"
+                    value="DELETE"
+                    class="button"
+                  />
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

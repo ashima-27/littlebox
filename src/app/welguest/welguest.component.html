@@ -1,0 +1,65 @@
+<!-- guest header -->
+<div class="header " id="home" >
+	<div class="container ">
+		<div>		<ul *ngIf="!loginstatus" class="hh">
+			<li><h4 class="head">Welcome {{name}}</h4></li>
+		    <li > <a routerLink="signin" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Sign In </a></li>
+
+			<li > <a routerLink="signup" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Sign Up </a></li>
+			<li > <a routerLink="adminsignup" data-toggle="modal" data-target="#myModal3"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Admin SignUp </a></li>
+
+			</ul>
+
+			<ul *ngIf="loginstatus" class="hh">
+				<li><h4 class="head">Welcome {{name}}</h4></li>
+				<li> <a routerLink="changepassword" data-toggle="modal" data-target="#myModal4"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Change Password </a></li>
+				<li > <a routerLink="orderhistory" data-toggle="modal" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Order History </a></li>
+				<li > <a routerLink="logout" data-toggle="modal" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Log Out </a></li>
+				</ul>
+
+		</div>
+
+
+	</div>
+</div>
+<!-- //header -->
+<!-- header-bot -->
+<div class="header-bot">
+	<div class="header-bot_inner_wthreeinfo_header_mid">
+		<!-- header-bot -->
+		<div class="col-md-4 header-middle">
+			<form action="#" method="post">
+				<input type="search" name="search" placeholder="Search here..." [(ngModel)]="srtxt" required="">
+					<input type="submit" name="bt1" (click)="onsearch()"  value=" ">
+				<div class="clearfix"></div>
+			</form>
+		</div>
+
+			<div class="col-md-4 logo_agile">
+				<h1><a href="index.html"><span>L</span>ittleBox<i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
+			</div>
+        <!-- header-bot -->
+		<div class="col-md-4 agileits-social top_content">
+						<ul class="social-nav model-3d-0 footer-social w3_agile_social">
+						                                   <li class="share">Share On : </li>
+															<li><a href="#" class="facebook">
+																  <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+																  <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
+															<li><a href="#" class="twitter">
+																  <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+																  <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
+															<li><a href="#" class="instagram">
+																  <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+																  <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
+															<li><a href="#" class="pinterest">
+																  <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+																  <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
+														</ul>
+
+
+
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!-- //header-bot -->

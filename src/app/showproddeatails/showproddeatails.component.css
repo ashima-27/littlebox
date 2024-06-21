@@ -1,0 +1,7 @@
+p {
+  font-family: Lato;
+}
+
+::ng-deep .custom-class {
+  filter: invert();
+}

@@ -1,0 +1,205 @@
+<div class="banner-bootom-w3-agileits">
+  <div class="container">
+    <div class="col-md-4 single-right-left">
+      <div class="grid images_3_of_2">
+        <div class="flexslider">
+          <ul class="slides">
+            <li data-thumb="images/d2.jpg">
+              <div class="thumb-image">
+                <!-- <ng-magnizoom
+                  zoomMode="LENS"
+                  [minZoomFactor]="1.1"
+                  imageSrc="uploads/{{ ppic }}"
+                  imageClass="img-responsive imgclass"
+                ></ng-magnizoom> -->
+                <img src="uploads/{{ ppic }}" class="img-responsive"/>
+              </div>
+
+              <!-- <ngx-img-zoom
+                            [zoomImageSrc]="uploads/{{ppic}}"
+               [previewImageSrc]="uploads/{{ppic}}"
+               [imgStyle]="'width:515px; height:515px; bottom:0;  left:0;  right:0;  top:0;  margin:0 auto; border:1px solid #dcdcdc;'"
+               [resultStyle]="`width:824px; height:824px; background-repeat: no-repeat; z-index: 2; position:absolute;
+                              -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                               box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); top: 0;left: 100%;`"
+               [lensStyle]="'width:155px; height:155px"
+               [enableZoom] = "enableZoom"
+               [containerStyle]=""
+           ></ngx-img-zoom></div> -->
+            </li>
+            <!-- <li data-thumb="images/d1.jpg">
+                    <div class="thumb-image"> <img src="images/d1.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                </li>
+                <li data-thumb="images/d3.jpg">
+                    <div class="thumb-image"> <img src="images/d3.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                </li> -->
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 single-right-left simpleCart_shelfItem">
+      <h3>{{ pname }}</h3>
+      <br />
+      <p class="white">
+        <span class="item_price white"></span>{{ reamt | currency: "INR" }}
+        <del>{{ rt | currency: "INR" }}</del>
+      </p>
+      <div class="rating1">
+        <span class="starRating">
+          <input id="rating5" type="radio" name="rating" value="5" />
+          <label for="rating5">5</label>
+          <input id="rating4" type="radio" name="rating" value="4" />
+          <label for="rating4">4</label>
+          <input id="rating3" type="radio" name="rating" value="3" checked="" />
+          <label for="rating3">3</label>
+          <input id="rating2" type="radio" name="rating" value="2" />
+          <label for="rating2">2</label>
+          <input id="rating1" type="radio" name="rating" value="1" />
+          <label for="rating1">1</label>
+        </span>
+      </div>
+      <br />
+      <br />
+      <!-- <div class="description">
+                <h5 class="white">Check delivery, payment options and charges at your location</h5>
+                 <form action="#" method="post">
+                <input type="text" value="Enter pincode" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter pincode';}" required="">
+                <input type="submit" value="Check" class="greenbg">
+                </form> class="frm-field required sect"
+            </div> -->
+      <div class="color-quality">
+        <div class="color-quality-right">
+          <h5 class="white">Quantity :</h5>
+          <p>
+            <select name="qty" [(ngModel)]="qty">
+              <option value="">choose</option>
+              <option *ngFor="let x of stockloop">{{ x }}</option>
+            </select>
+          </p>
+        </div>
+      </div>
+      <!-- <div class="occasional">
+                <h5>Types :</h5>
+                <div class="colr ert">
+                    <label class="radio"><input type="radio" name="radio" checked=""><i></i>Casual Shoes</label>
+                </div>
+                <div class="colr">
+                    <label class="radio"><input type="radio" name="radio"><i></i>Sneakers </label>
+                </div>
+                <div class="colr">
+                    <label class="radio"><input type="radio" name="radio"><i></i>Formal Shoes</label>
+                </div>
+                <div class="clearfix"> </div>
+            </div> -->
+      <div>
+        <br />
+        <br />
+        <div class="occasion-cart">
+          <div
+            class="
+              snipcart-details
+              top_brand_home_details
+              item_add
+              single-item
+              hvr-outline-out
+              button2
+            "
+          >
+            <form action="#" method="post">
+              <fieldset>
+                <input
+                  type="submit"
+                  name="submit"
+                  (click)="addtocart()"
+                  *ngIf="!buttonflag"
+                  value="Add to cart"
+                  class="button"
+                />
+
+                <input
+                  type="submit"
+                  name="submit"
+                  (click)="updatecart()"
+                  *ngIf="buttonflag"
+                  value="UPDATE CART"
+                  class="button"
+                />
+                <div *ngIf="!flag">
+                  <h3>OUT OF STOCK</h3>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+      <ul
+        class="
+          social-nav
+          model-3d-0
+          footer-social
+          w3_agile_social
+          single_page_w3ls
+        "
+      >
+        <li class="share white">Share On :</li>
+        <li>
+          <a href="#" class="facebook">
+            <div class="front">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </div>
+            <div class="back">
+              <i class="fa fa-facebook" aria-hidden="true"></i></div
+          ></a>
+        </li>
+        <li>
+          <a href="#" class="twitter">
+            <div class="front">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </div>
+            <div class="back">
+              <i class="fa fa-twitter" aria-hidden="true"></i></div
+          ></a>
+        </li>
+        <li>
+          <a href="#" class="instagram">
+            <div class="front">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </div>
+            <div class="back">
+              <i class="fa fa-instagram" aria-hidden="true"></i></div
+          ></a>
+        </li>
+        <li>
+          <a href="#" class="pinterest">
+            <div class="front">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </div>
+            <div class="back">
+              <i class="fa fa-linkedin" aria-hidden="true"></i></div
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="clearfix"></div>
+    <!-- /new_arrivals -->
+    <div class="responsive_tabs_agileits">
+      <div id="horizontalTab">
+        <ul class="resp-tabs-list">
+          <li class="white">Description</li>
+        </ul>
+        <div class="resp-tabs-container">
+          <!--/tab_one-->
+          <div class="tab1">
+            <div class="single_page_agile_its_w3ls">
+              <h6 class="white">{{ pname }}</h6>
+              <p class="white">{{ desc }}</p>
+            </div>
+          </div>
+          <!--//tab_one-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

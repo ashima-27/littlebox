@@ -1,0 +1,9 @@
+.down{
+    margin-bottom:20px;
+    margin-right:10px;
+    display:flex;
+    
+}
+.row{
+    justify-content: center !important;
+}

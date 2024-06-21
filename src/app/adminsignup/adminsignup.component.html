@@ -1,0 +1,184 @@
+<!-- Modal2 -->
+<!-- <div class="modal fade" id="myModal2" tabindex="-1" role="dialog"> -->
+<div class="modal-dialog">
+  <!-- Modal content-->
+  <div class="modal-content des">
+    <!-- <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div> -->
+    <div class="modal-body modal-body-sub_agile">
+      <div class="col-md-8 modal_body_left modal_body_left1">
+        <h3 class="agileinfo_sign">ADMIN Sign Up <span>Now</span></h3>
+        <form action="#" method="post" #loginform="ngForm">
+          <div class="styled-input agile-styled-input-top">
+            <input
+              type="text"
+              name="Name"
+              [(ngModel)]="name"
+              required
+              minlength="4"
+              #nm="ngModel"
+            />
+            <div
+              *ngIf="nm.invalid && (nm.dirty || nm.touched)"
+              class="alert alert-danger"
+            >
+              <div *ngIf="nm.errors?.required">Name is required.</div>
+              <div *ngIf="nm.errors?.minlength">
+                Name must be at least 4 characters long.
+              </div>
+            </div>
+            <label>Name</label>
+            <span></span>
+          </div>
+          <div class="styled-input agile-styled-input-top">
+            <input
+              type="text"
+              name="Phone"
+              [(ngModel)]="phone"
+              required
+              pattern="^((\\+91-?)|0)?[0-9]{10}$"
+              #phn="ngModel"
+            />
+            <div
+              *ngIf="nm.invalid && (nm.dirty || nm.touched)"
+              class="alert alert-danger"
+            >
+              <div *ngIf="phn.errors.required">Mobile Number is required.</div>
+              <div *ngIf="phn.errors.pattern">
+                Please, Enter 10 digit Mobile Number.
+              </div>
+            </div>
+            <label>Phone Number</label>
+            <span></span>
+          </div>
+          <div class="styled-input">
+            <input
+              type="email"
+              name="Email"
+              [(ngModel)]="username"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+              #mail="ngModel"
+            />
+            <div
+              *ngIf="mail.invalid && (mail.dirty || mail.touched)"
+              class="alert alert-danger"
+            >
+              <div *ngIf="mail.errors.required">Mail Id is required.</div>
+              <div *ngIf="mail.errors.pattern">
+                Please, enter valid email address
+              </div>
+            </div>
+            <label>Email</label>
+            <span></span>
+          </div>
+          <div class="styled-input">
+            <input
+              type="password"
+              name="password"
+              [(ngModel)]="password"
+              required
+              pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+              #pass="ngModel"
+            />
+            <div
+              *ngIf="pass.invalid && (pass.dirty || pass.touched)"
+              class="alert alert-danger"
+            >
+              <div *ngIf="pass.errors.required">Password is required.</div>
+              <div *ngIf="pass.errors.pattern">
+                (Password (UpperCase, LowerCase and Number) )
+              </div>
+            </div>
+            <label>Password</label>
+            <span></span>
+          </div>
+          <div class="styled-input">
+            <input
+              type="password"
+              name="Confirm Password"
+              [(ngModel)]="cpassword"
+              required=""
+              #cpass="ngModel"
+            />
+            <div
+              *ngIf="cpass.invalid && (cpass.dirty || cpass.touched)"
+              class="alert alert-danger"
+            >
+              <div *ngIf="cpass.errors.required">Password is required.</div>
+              <div *ngIf="cpass.errors.matching">
+                Password and Confirm Password must be match.
+              </div>
+            </div>
+            <label>Confirm Password</label>
+            <span></span>
+          </div>
+          <input
+            type="submit"
+            value="Sign Up"
+            (click)="Onsignup()"
+            [disabled]="!loginform.valid"
+          />
+        </form>
+        <ul
+          class="
+            social-nav
+            model-3d-0
+            footer-social
+            w3_agile_social
+            top_agile_third
+          "
+        >
+          <li>
+            <a href="#" class="facebook">
+              <div class="front">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </div>
+              <div class="back">
+                <i class="fa fa-facebook" aria-hidden="true"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="twitter">
+              <div class="front">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </div>
+              <div class="back">
+                <i class="fa fa-twitter" aria-hidden="true"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="instagram">
+              <div class="front">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </div>
+              <div class="back">
+                <i class="fa fa-instagram" aria-hidden="true"></i></div
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="pinterest">
+              <div class="front">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </div>
+              <div class="back">
+                <i class="fa fa-linkedin" aria-hidden="true"></i></div
+            ></a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+        <p><a href="#">By clicking register, I agree to your terms</a></p>
+
+        <p>{{ msg }}</p>
+      </div>
+      <div class="col-md-4 modal_body_right modal_body_right1">
+        <img src="images/log_pic.jpg" class="imgt" alt=" " />
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!-- //Modal content-->
+</div>
+<!-- </div> -->
+<!-- //Modal2 -->

@@ -1,0 +1,12 @@
+<!--/grids-->
+<h3 class="wthree_text_info white shs" style=" margin-top: 30.5px;"    >SUB <span>CATEGORIES</span></h3>
+<div class=" row agile_last_double_sectionw3ls" style="width:100%"  >
+    <div class="col-md-3 multi-gd-img multi-gd-text down" *ngFor="let x of subcatlist">
+        <a routerLink="/showproducts" [queryParams]="{scid:x._id}">
+           <img src="uploads/{{x.subcatpic}}" alt=" " class="imgsize"/><b><h4 class="subdes">{{x.subcatname}}</h4></b></a>
+            
+    </div>
+     
+    <div class="clearfix"></div>
+</div>							
+<!--/grids-->

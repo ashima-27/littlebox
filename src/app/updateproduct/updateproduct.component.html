@@ -1,0 +1,81 @@
+<!-- Modal1 -->
+<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog">-->
+    <div class="modal-dialog"> 
+        <!-- Modal content-->
+        <div class="modal-content dest">
+            <!-- <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div> -->
+                <div class="modal-body modal-body-sub_agile">
+                <div class="col-md-8 modal_body_left modal_body_left1 chnges">
+                <h3 class="agileinfo_sign">UPDATE <span>PRODUCTS</span></h3>
+                            <form enctype="multipart/form-data" action="#" method="post">
+                                <div class="styled-input form-group">
+                                <select class="custom-select form-group styled-input" name="category" [(ngModel)]="category"   >
+                                    <option value="">Choose Category</option>
+                                    <option *ngFor="let x of allcatlist " value="{{x._id}}">{{x.categoryname}}</option>
+                                  </select>
+                                  <label>Category Name</label>
+                                    
+                                </div> 
+                                <div class="styled-input form-group">
+                                    <select class="custom-select form-group styled-input" name="subcat" [(ngModel)]="subcat"  (change)="showprod()">
+                                        <option value="">Choose Sub-Category</option>
+                                        <option *ngFor="let x of subcatlist " value="{{x._id}}">{{x.subcatname}}</option>
+                                      </select>
+                                      <label>Sub-Category Name</label>
+                                        
+                                    </div> 
+                    <div class="styled-input p-3">
+                        <input  type="text" name="prodname" [(ngModel)]="prodname" required=""> 
+                        <label>Product Name</label>
+                        <span></span>
+                    </div> 
+                    <div class="form-group styled-input">
+                        <img src="uploads/{{Productpic}}" height="75"><br/>
+        
+                        Choose new image, if required
+                    </div>
+                    <div class="form-group">
+                    <input type="file" name="prodpic"  (change)="fileselected($event)">
+                    <!-- <label>Category Image</label> -->
+                    <span></span>
+               </div>
+                <div class="form-group">
+
+                   <input type="submit" value="UPDATE " name="b1" (click)="productupdate()">
+                   <input type="submit" name="b3" (click)="oncancel()" value="CANCEL" class="button">
+                   
+                    <span></span>
+                </div> 
+               
+                </form>
+                  <!-- <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
+                                                    <li><a href="#" class="facebook">
+                                                          <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                                                          <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
+                                                    <li><a href="#" class="twitter"> 
+                                                          <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                                                          <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
+                                                    <li><a href="#" class="instagram">
+                                                          <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                                                          <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
+                                                    <li><a href="#" class="pinterest">
+                                                          <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                                                          <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
+                                                </ul> -->
+
+                                                <div class="clearfix"></div>
+                                               
+                                                <p>{{msg}}</p>
+                                                
+                </div>
+                <div class="col-md-4 modal_body_right modal_body_right1">
+                    <img src="uploads/{{Productpic}}" class="size" alt=" "/>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- //Modal content-->
+    </div>
+<!-- </div> --> 

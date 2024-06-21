@@ -1,0 +1,46 @@
+<div
+  style="
+    width: 100% !important;
+    background: white !important;
+    padding: 10px !important;
+    display: grid !important;
+    justify-content: center !important;
+  "
+>
+  <div class="modal-content p-4 am">
+    <!-- <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+  </div> -->
+    <!-- <div class="modal-body modal-body-sub_agile"> -->
+    <!-- <div class="col-md-8 modal_body_left modal_body_left1"> -->
+    <h3 class="agileinfo_sign mt-3">ORDER HISTORY</h3>
+    <table class="table table-responsive table-striped">
+      <thead>
+        <tr>
+          <th scope="col">SNo.</th>
+          <th scope="col">ID</th>
+          <th scope="col">AMOUNT</th>
+          <th scope="col">MODE</th>
+          <th scope="col">DATE</th>
+          <th scope="col">STATUS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let x of orderlist; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>
+            <a routerLink="/orderdetails" [queryParams]="{ oid: x._id }">{{
+              x._id
+            }}</a>
+          </td>
+          <td>{{ x.billamt }}</td>
+          <td>{{ x.pmode }}</td>
+          <td>{{ x.orderdt }}</td>
+          <td>{{ x.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- </div>
+</div> -->

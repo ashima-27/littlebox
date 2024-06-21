@@ -1,0 +1,30 @@
+
+<!-- banner-bootom-w3-agileits -->
+<div class="banner-bootom-w3-agileits">
+	<div class="container ">
+	<!---728x90--->
+	<h3 class="wthree_text_info white">ALL <span>CATEGORIES</span></h3>
+	
+	<div class="catsub ">
+		<div class="row bb-grids bb-middle-agileits-w3layouts rr " style="width:100%" >
+		      <!-- <div class="d-flex flex-row  align-self-center flex-wrap "> -->
+		       <div class="col-md-3 bb-middle-agileits-w3layouts grid down shc" style="max-width: 32% !important;" *ngFor="let x of allcatlist ">
+				<a routerLink="/showsubcat" [queryParams]="{cid:x._id}">
+			           <figure class="effect-roxy  " style="width:387px !important;">
+							<img src="uploads/{{x.categorypic}}"  alt=" " class="img-responsive imgsize" />
+							<figcaption>
+								<!-- <h3><span>S</span>ale </h3>
+								<p>Upto 55%</p> -->
+								<h3>{{x.categoryname}}</h3>
+							</figcaption>			
+						</figure>
+						</a>
+		        </div>
+				
+				
+		<div class="clearfix"></div>
+	</div>
+	<!-- </div> -->
+    </div>
+</div>
+<!--  -->
